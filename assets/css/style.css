@@ -1,0 +1,288 @@
+/* color variables*/
+:root {
+  --primary: #1a74c8;
+  --secondary: white;
+  --difbackground: lightblue;
+  --font:black;
+  --border: rgb(235, 18, 18);
+  --hover: rgb(33, 207, 70);  
+}
+
+/*body styling*/
+body {
+  background-color: var(--primary);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/*header styling*/
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  line-height: 1.3;
+  background-color: var(--primary);
+  padding: 30px;
+}
+
+header h1 {
+  display: inline-block;
+  font-size: 48px;
+}
+/*nav styling*/
+nav ul {
+  list-style-type: none;       
+  overflow: hidden;
+  background-color: var(--font);
+  border-radius: 0px 5px 5px 0px;
+  }
+
+li {
+  float: left;
+  border-radius: 5px;
+  border-right: 1px solid #bbb;
+    
+  }
+  
+li a {
+  display: block;
+  color: var(--secondary);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+  
+li a:hover {
+  background-color: var(--hover);
+  border-radius: 0px 5px 5px 0px;
+  }
+/*picture, background, and quote*/
+.picture {
+  background-image: url("../images/moon.jpg");
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.picture img {
+  height: 200px;
+  border-radius: 100px;
+}
+
+#quote {
+  font-size: 35px;
+  display: flex;
+  justify-content: end;
+  text-align: right;
+  color: var(--border);
+}
+
+/*body box styling*/
+.boxstyling {
+  border-right: 5px solid var(--border);
+  min-height: 100%;
+  text-align: right;
+  padding-right: 40px;
+  min-width: 20%;
+  max-width: 20%;
+}
+
+.boxstyling h2 {
+  font-size: 30px;
+  color:var(--font)
+}
+
+/*about me styling*/
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-top: 30px;
+  background-color: var(--difbackground);
+}
+
+.about p {
+  font-size: 20px;
+  padding: 0 30px;
+  line-height: 1.6;
+  width: 90%;
+}
+
+/*project styling*/
+.project {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary);
+}
+
+.grid {
+  width: 80%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-grid {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.style {
+  border: solid;
+  color: var(--font);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+}
+
+.style:hover {
+  opacity: 1.0;
+}
+
+.horiseon {
+    grid-column: 1/3;
+  grid-row: span 2;
+  background-image: url("../images/digital-marketing-meeting.jpg");
+}
+
+.project-label {
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 10px;
+}
+
+/*footer styling*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+.content-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+footer ul li {
+  font-weight: bold;
+
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: var(--font);
+  padding: 8px;
+  font-weight: bold;
+}
+
+footer ul li:hover {
+  background: var(--hover);
+  color: var(--primary);
+  border-radius: 15px;
+}
+
+/* media for tablet */
+@media screen and (max-width: 768px) {
+  .picture #quote {
+    font-size: 28px;
+    padding-right: 20px;
+  }
+  
+  .boxstyling h2 {
+    font-size: 35px;
+  }
+
+  .about p {
+    font-size: 16px;     
+    line-height: 1.6;
+  }
+}
+
+/* media for smart phone */
+@media screen and (max-width: 575px) {
+  header {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  header nav ul {
+    min-height: 30px;
+  }
+
+  .picture {
+    flex-direction: column;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about p {
+    font-size: 16px;
+    line-height: 1.6;
+    width: 100%;
+    padding: 15px;
+  }
+  .boxstyling {
+    border-bottom: 5px solid var(--border);
+    border-right: none;
+    text-align: center;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0;
+  } 
+
+  .project {
+    flex-direction: column;
+    padding: 30px 0;
+  }
+
+  .grid {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .projects-grid {
+    width: 80%;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer ul {
+    flex-direction: column;
+  }
+
+  .content-wrapper {
+    width: 100%;
+  }
+
+  footer ul li {
+    padding: 10px;
+    text-align: center;
+  }  
+}
