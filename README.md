@@ -9,6 +9,6 @@
 -The page was styled for multiple screen sizes, including tablets and mobile phones.
 -Hover affects over the navigation bar, project link, and contact info.
 
-Live link [Professionl Porfolio](https://nguyendoan85.github.io/Porfolio/)
+Live link [Professional Porfolio](https://nguyendoan85.github.io/Porfolio/)
 
 ![ScreenShot](assets/images/ChallengeScreenShot.jpg)
